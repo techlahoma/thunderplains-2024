@@ -1,0 +1,8 @@
+:root {
+  --navy: #05125f;
+  --magenta: #931cad;
+  --darkMagenta: #5E1279;
+  --darkGrey: #242736;
+  --white: #fff;
+  --header-gradient: linear-gradient(320deg,#5e1279 2.37%,#05125f 67.37%)
+}
