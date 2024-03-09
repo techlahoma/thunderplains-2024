@@ -6,3 +6,13 @@
   --white: #fff;
   --header-gradient: linear-gradient(320deg,#5e1279 2.37%,#05125f 67.37%)
 }
+
+body {
+  background-color: var(--darkGrey);
+  color: var(--navy);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
