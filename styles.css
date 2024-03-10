@@ -10,7 +10,7 @@
 body {
   margin: 0;
   padding: 0;
-  color: white;
+  color: var(--white);
 }
 
 nav {
@@ -18,25 +18,32 @@ nav {
   height: 2rem;
   background: var(--darkGrey);
   align-items: center;
+  justify-content: space-between;
   padding: 0px 5em;
 }
 
 .logo {
   margin: 0;
+  margin-right: -2.9em;
+  font-size: 1.25rem;
 }
 
 .logo-bolt {
   height: 1.5rem;
+  padding-top: 1em;
 }
 
 .links {
   display: flex;
-  margin: 0;
+  padding: 0;
 }
 
 .link {
   list-style: none;
   margin: 5px;
+}
+
+.socials {
 }
 
 header {
@@ -51,6 +58,10 @@ header {
   height: 40rem;
 }
 
+.subhead-divider {
+  color: var(--magenta);
+}
+
 section {
   margin: auto;
   max-width: 1240px;
@@ -61,19 +72,22 @@ section {
   text-align: center;
   width: 100%;
   height: auto;
+  z-index: 2;
 }
 
-/* .img-wrapper::after {
-    position: absolute;
-    background: url(/assets/dots.png);
-    background-size: .7rem;
-    content: " ";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-  } */
+.img-wrapper::after {
+  position: absolute;
+  background: url(/assets/dots.png);
+  background-repeat: repeat;
+  background-size: 1rem;
+  content: " ";
+  width: 80vw;
+  height: 77.5vh;
+  top: -50px;
+  left: 58%;
+  opacity: 2%;
+  z-index: -1;
+}
 
 .header-img {
   height: 30em;
@@ -83,6 +97,21 @@ section {
 .text-wrapper {
   height: 500px;
   width: 100%;
+  z-index: 10;
+}
+
+.header-text {
+  font-size: 3rem;
+  margin-bottom: 0px;
+  font-family: "Murecho", sans-serif;
+}
+
+.sub-header {
+  font-family: "Lato", sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  margin-top: 0;
+  color: var(--magenta);
 }
 
 .flex-grow {
@@ -102,11 +131,13 @@ section {
 .btn {
   display: flex;
   margin: auto;
+  z-index: 2;
 }
 
 .header-btn {
   background: var(--magenta);
   height: 2rem;
+  min-width: 8em;
   width: 12.5vw;
   font-size: 24px;
   border-radius: 4px;
@@ -144,8 +175,8 @@ section {
 
 #volunteer {
   position: relative;
-  left: 0.6rem;
-  top: 0.3rem;
+  left: 0.9rem;
+  top: 1.2rem;
   height: 2.3em;
   rotate: -8deg;
 }
