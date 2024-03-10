@@ -1,3 +1,5 @@
+/*** BASE STYLES & VARIABLES ***/
+
 :root {
   --navy: #05125f;
   --magenta: #931cad;
@@ -7,12 +9,205 @@
   --header-gradient: linear-gradient(320deg,#5e1279 2.37%,#05125f 67.37%)
 }
 
-body {
-  background-color: var(--darkGrey);
-  color: var(--navy);
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.hide {
+  display: none !important;
+  overflow: hidden !important;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+section,
+footer {
+  width: 100%;
+}
+
+/* SECTION */
+section {
+  background-color: #fff;
+  color: var(--navy);
+  padding: 5rem 0;
+}
+
+section #s1 {
+  width: 90%;
+}
+
+section #s1 h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+section #s1 img {
+  width: 100%;
+}
+
+section #s2 {
+  width: 80%;
+  padding-top: 2rem;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+section #s2-2,
+section #s2-3 {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+section #s2-3 {
+  font-size: 2rem;
+  padding-top: 2rem;
+}
+
+section #s2-2 h5,
+section #s2-3 h5 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+  color: #000;
+}
+
+section #s2-2 h6,
+section #s2-3 h6 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+section #s2-2 h6 {
+  text-transform: uppercase;
+}
+
+section #s2-3 p {
+  font-size: 1rem;
+  font-style: italic;
+  color: #000;
+}
+
+section #photo-wrapper {
+  width: 90%;
+  padding-top: 2rem;
+}
+
+section #photo-wrapper img {
+  width: 100%;
+}
+
+/* FOOTER */
+footer #f1 {
+  width: 100%;
+  background-color: var(--darkGrey);  
+  padding: 2rem 0;
+} 
+
+footer #f1 img {
+  width: 55%;
+}
+
+footer #f2 {
+  width: 100%;
+  background-color: var(--magenta);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+footer #f2 p {
+  width: 85%; 
+}
+
+footer #f2 a {
+  color: #fff;
+}
+
+footer #f2-p1 {
+  font-size: 1.2rem;
+}
+
+footer #f2-p2 {
+  font-size: 0.8rem;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+footer #f2 ul {
+  width: 85%;
+  margin-top: 1rem;
+}
+
+footer #f2 ul li {
+  width: auto;
+  padding: 0 0.5rem;
+  margin: 0.3rem 0;
+  border-right: solid 0.1rem #fff;
+}
+
+footer #f2 ul #first-li {
+  font-weight: 700;
+  border: none;
+}
+
+footer #f2 ul #last-li {
+  border-right: none;
+}
+
+/** TABLET STYLES ***/
+@media (min-width: 768px) {
+  section #s1 h3 {
+    font-size: 2.5rem;
+  }
+  
+  section .div-third {
+    width: 30%;
+  }
+  
+  section #s2{
+    flex-direction: row;
+  }
+  
+  section #s2-2 {
+    padding-left: 7rem;
+  }
+  
+  section #s2-3 {
+    padding-left: 5rem;
+  }
+  
+  section #photo-wrapper {
+    width: 25%;
+    padding-top: none;
+  }
+  
+  section #photo-wrapper img {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+  }
+  
+  footer #f1 img {
+    width: 35%;
+  }
+}
+
+/** DESKTOP STYLES ***/
+@media (min-width: 1200PX) {
+
 }
