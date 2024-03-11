@@ -1,0 +1,182 @@
+:root {
+  --navy: #05125f;
+  --magenta: #931cad;
+  --darkMagenta: #5e1279;
+  --darkGrey: #242736;
+  --white: #fff;
+  --header-gradient: linear-gradient(320deg, #5e1279 2.37%, #05125f 67.37%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--white);
+}
+
+nav {
+  display: flex;
+  height: 2rem;
+  background: var(--darkGrey);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 5em;
+}
+
+.logo {
+  margin: 0;
+  margin-right: -2.9em;
+  font-size: 1.25rem;
+}
+
+.logo-bolt {
+  height: 1.5rem;
+  padding-top: 1em;
+}
+
+.links {
+  display: flex;
+  padding: 0;
+}
+
+.link {
+  list-style: none;
+  margin: 5px;
+}
+
+.socials {
+}
+
+header {
+  margin-top: 0;
+  padding-top: 3em;
+}
+
+.tplains-header {
+  position: relative;
+  background: var(--header-gradient);
+  width: 100vw;
+  height: 40rem;
+}
+
+.subhead-divider {
+  color: var(--magenta);
+}
+
+section {
+  margin: auto;
+  max-width: 1240px;
+}
+
+.img-wrapper {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+}
+
+.img-wrapper::after {
+  position: absolute;
+  background: url(/assets/dots.png);
+  background-repeat: repeat;
+  background-size: 1rem;
+  content: " ";
+  width: 80vw;
+  height: 77.5vh;
+  top: -50px;
+  left: 58%;
+  opacity: 2%;
+  z-index: -1;
+}
+
+.header-img {
+  height: 30em;
+  text-align: center;
+}
+
+.text-wrapper {
+  height: 500px;
+  width: 100%;
+  z-index: 10;
+}
+
+.header-text {
+  font-size: 3rem;
+  margin-bottom: 0px;
+  font-family: "Murecho", sans-serif;
+}
+
+.sub-header {
+  font-family: "Lato", sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  margin-top: 0;
+  color: var(--magenta);
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn-container {
+  display: flex;
+  height: 3rem;
+  margin-top: 3em;
+}
+
+.btn {
+  display: flex;
+  margin: auto;
+  z-index: 2;
+}
+
+.header-btn {
+  background: var(--magenta);
+  height: 2rem;
+  min-width: 8em;
+  width: 12.5vw;
+  font-size: 24px;
+  border-radius: 4px;
+}
+
+.img-box {
+  position: relative;
+  background: var(--darkGrey);
+  right: 6rem;
+  bottom: 1.2rem;
+  height: 75px;
+  width: 75px;
+  rotate: 8deg;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.btn-img {
+}
+
+#sponsor {
+  position: relative;
+  left: 0.8rem;
+  top: 1.1rem;
+  height: 2.3em;
+  rotate: -8deg;
+}
+
+#speak {
+  position: relative;
+  left: -9.5rem;
+  top: -0.2rem;
+  height: 2.8em;
+}
+
+#volunteer {
+  position: relative;
+  left: 0.9rem;
+  top: 1.2rem;
+  height: 2.3em;
+  rotate: -8deg;
+}
