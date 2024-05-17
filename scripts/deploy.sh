@@ -3,16 +3,17 @@ GIT_BRANCH=$(git symbolic-ref -q HEAD)
 GIT_REPO_URL=$(git config --get remote.origin.url)
 BUILD_FOLDER=".build"
 
+# Ensure there are no local changes
+if ! git diff-index --quiet HEAD --; then
+  echo "ERROR: Local file changes. Commit or stash them first! Aborting!" && exit 1
+fi
+
 # Build
 # npm run build
-
-# Prepare
-git stash
 
 # Deploy & setup
 mkdir $BUILD_FOLDER
 cd $BUILD_FOLDER
-rm .DS_Store
 git init .
 git remote add origin $GIT_REPO_URL
 git checkout -b gh-pages || (echo "Cannot chekout gh-pages branch!" && exit 1)
@@ -32,4 +33,3 @@ rm -rf $BUILD_FOLDER
 
 # Restore
 git checkout main
-git stash pop
