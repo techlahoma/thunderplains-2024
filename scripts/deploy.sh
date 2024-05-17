@@ -6,7 +6,11 @@ BUILD_FOLDER=".build"
 # Build
 # npm run build
 
+# Prepare
+git stash
+
 # Deploy & setup
+mkdir $BUILD_FOLDER
 cd $BUILD_FOLDER
 rm .DS_Store
 git init .
@@ -25,3 +29,7 @@ git commit -am "Static site deploy"
 git push origin gh-pages --force
 cd ..
 rm -rf $BUILD_FOLDER
+
+# Restore
+git checkout main
+git stash pop
