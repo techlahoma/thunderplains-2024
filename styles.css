@@ -490,18 +490,167 @@ section.event-details-wrapper {
   color: var(--darkGrey);
 }
 
+/* ------ SPEAKERS WRAPPER ------ */
 .speakers-wrapper{
   padding: 3rem 0;
   text-align: center;
-  background-color: var(--lightPurple);
+  background-color: var(--white);
   color: var(--navy);
 }
 .speakers-wrapper h2{
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .speakers-wrapper p{
   color: var(--darkGrey);
 }
+.speaker-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-flow: row wrap;
+}
+.speaker-item{
+  flex: 0 1 100%;
+  padding: 1rem;
+  border: 2px solid var(--lightPurple);
+  border-radius: 8px;
+  margin: 4rem 1rem 1rem;
+}
+@media all and (min-width: 750px){
+  .speaker-item{
+    flex: 0 1 45%;
+    padding: 1rem;
+    border: 2px solid var(--lightPurple);
+    border-radius: 8px;
+    margin: 4rem 1rem 1rem;
+  }
+}
+.speaker-item .img-wrapper{
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 1rem;
+  transform: rotate(7deg);
+  margin-bottom: 1rem;
+  border: 10px solid var(--white);
+  box-shadow: 0 2px 10px 8px rgba(0,0,0,.11);
+  margin-top: -2rem;
+}
+.speaker-item .img-wrapper img{
+  width: auto;
+  height: 100%;
+}
+.speaker-item .copy-wrapper h3{
+  color: var(--darkMagenta);
+}
+.speaker-item .copy-wrapper h3 span{
+  display: block;
+  font-size: .5em;
+  color: var(--magenta);
+}
+.speaker-item .copy-wrapper p{
+  text-align: left;
+  margin: 1rem auto;
+  max-width: 96%;
+  line-height: 140%;
+}
+
+/* ------ SCHEDULE WRAPPER ------ */
+.schedule-wrapper{
+  padding: 4rem 0;
+  background-color: var(--lightPurple);
+  color: var(--navy);
+}
+.schedule-wrapper .btn-wrapper{
+  margin-top: 2rem;
+}
+
+/* ----- FAQ Section Styles ----- */
+#faq{
+  position: relative;
+  padding: 3rem 0;
+}
+#faq .faq-wrapper h2{
+  top: -49px;
+  position: absolute;
+  left: 18px;
+  font-weight: bold;
+  font-size: 48px;
+  color: var(--darkMagenta);
+}
+#faq .row-wrapper{
+  position: relative;
+  z-index: 3;
+  max-width: 960px;
+}
+#faq .faq-wrapper{
+  max-width: 752px;
+  width: 96%;
+  position: relative;
+  z-index: 2;
+  background-color: var(--magenta);
+  color: white;
+  margin: 2rem auto;
+}
+#faq .faq-list{
+  padding: 1rem;
+}
+.faq-wrap{
+  padding: 1rem 0;
+}
+.faq-q{
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 120%;
+}
+.faq-a{
+  color: var(--white);
+  font-weight: 500;
+}
+.faq-a a{
+    color: var(--white);
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: underline dotted 2px var(--white);
+    transition: var(--default-transition);
+  }
+.faq-a a:focus, .faq-a a:hover {
+  text-decoration: underline solid 2px var(--white);
+}
+#faq::before{
+  opacity: 0.03;
+  background-repeat: repeat;
+  background-position: center center;
+  background-image: radial-gradient(black 7px, transparent 0);
+  background-size: 30px 30px;
+  background-color: lightgray;
+  content: " ";
+  position: absolute;
+  top: 20%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80%;
+  width: 100%;
+  z-index: 0;
+}
+#faq::after{
+  background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 105.67%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  right: 30%;
+  width: 70%;
+  content: '';
+  z-index: 1;
+}
+
+
+
+/* ----- Sponsors Section Styles ----- */
+
 .sponsors-wrapper{
   padding: 3rem 0;
   text-align: center;
@@ -516,6 +665,103 @@ section.event-details-wrapper {
   margin: 1rem auto;
 }
 
+#sponsors{
+  background: linear-gradient(320deg, #5E1279 2.37%, #05125F 67.37%);
+  color: white;
+  padding: 2rem 0;
+}
+
+#sponsors h2{
+  margin-bottom: 1rem;
+  color: white;
+}
+#sponsors h3{
+  color: white;
+}
+#sponsors p{
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+}
+#sponsors p > a{
+  color: var(--white);
+  font-weight: 600;
+  text-decoration: underline dotted 2px var(--white);
+}
+#sponsors p > a:hover, #sponsors p > a:focus {
+  text-decoration: underline solid 2px var(--white);
+}
+#sponsors p.intro{
+  font-size: 1.25rem;
+}
+.sponsor-group{
+  margin-top: 2rem;
+  padding-top: 1rem;
+  margin-bottom: 3rem;
+}
+.sponsor-group header{
+  border-bottom: 1px solid white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  align-items: center;
+  flex-flow: column;
+}
+.sponsor-group header h3{
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+.sponsor-group header a{
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.sponsor-list{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 2rem;
+  flex-flow: row wrap;
+}
+.sponsor-list .sponsor-item{
+  margin: 1rem;
+  flex: 0 1 80%;
+}
+.sponsor-list .sponsor-item .s-wrap{
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 1rem;
+  align-items: center;
+  text-align: left;
+}
+.sponsor-list .sponsor-item a{
+  flex: 0 1 125px;
+  background-color: white;
+  aspect-ratio: 1/1;
+  display: flex;
+  padding: 1rem .75rem;
+  border-radius: 300px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 5px solid var(--lightPurple);
+  margin-right: 1rem;
+  position: relative;
+}
+.sponsor-list .sponsor-item a img{
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+}
+.sponsor-list .sponsor-item h4{
+  font-size: 1.25rem;
+}
+.sponsor-list .sponsor-item h4 span{
+  display: block;
+  font-size: .7em;
+}
+
+/*
 /* ------ FOOTER ------ */
 footer.footer{
   width: 100%;
@@ -637,6 +883,22 @@ footer img {
     padding-left: 40%;
     padding-top: 0;
   }
+  /* ------ Sponsors ------ */
+  .sponsor-group header{
+    flex-flow: row;
+  }
+  .sponsor-list .sponsor-item{
+    margin: 1rem;
+    flex: 0 1 28%;
+  }
+  .sponsor-list .sponsor-item .s-wrap{
+    text-align: center;
+    flex-flow: column;
+  }
+  .sponsor-list .sponsor-item .s-wrap a{
+    margin-right: 0;
+    flex: 0 1 225px;
+  }
   footer #f1 img {
     width: 35%;
   }
@@ -688,7 +950,25 @@ footer img {
     font-size: 18px;
   }
 
-
+  #sponsors{
+    padding: 4rem 0;
+  }
+  #faq .faq-wrapper{
+    margin: 2rem auto 4rem 0;
+  }
+  #faq .faq-wrapper h2{
+    position: absolute;
+    font-size: 200px;
+    font-style: normal;
+    font-weight: 700;
+    transform: rotate(90deg);
+    left: 75%;
+    top: 350px;
+    line-height: 1;
+  }
+  .sponsor-list .sponsor-item a{
+    border: 10px solid var(--lightPurple);
+  }
 }
 
 
